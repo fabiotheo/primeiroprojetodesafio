@@ -7,12 +7,6 @@ interface CreateTransactionDTO {
   type: "income" | "outcome",
 }
 
-interface BalanceDTO {
-  income: number;
-  outcome: number;
-  total: number;
-}
-
 class CreateTransactionService {
   private transactionsRepository: TransactionsRepository;
 
@@ -34,8 +28,6 @@ class CreateTransactionService {
 
     return transaction;
   }
-
-  public sumBalance({}: BalanceDTO) {}
 }
 
 export default CreateTransactionService;
